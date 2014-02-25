@@ -18,7 +18,7 @@ app.use(express.cookieParser());
 app.use(express.session({secret: '2343q41'}));
 app.use(express.csrf());
 app.use(function(req, res, next) {
-  res.locals.csrftoken = req.csrftoken();
+  res.locals.csrftoken = req.csrfToken();
   next();
 })
 
