@@ -31,5 +31,5 @@ app.get('/posts/:id/edit', post.edit);
 app.put('/posts/:id', post.update);
 app.delete('/posts/:id', post.destroy);
 
-app.listen(3000);
+app.listen(process.env.PORT || 5000);
 console.log("server starting ...");
